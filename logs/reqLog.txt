@@ -1,2 +1,12 @@
 2023-19-02	12-19-58	97b3ac95-9dc1-45b8-a1af-7e2f23c9c5d3	/	undefined	GET
 2023-20-02	12-20-12	81c7aba9-319d-42c2-9e79-96a77fbe075a	/	undefined	GET
+2023-10-10	14-10-40	57c6c485-ad4a-4716-aa0c-83de756fc28b	/	undefined	GET
+2023-11-10	14-11-47	3cbd30a8-6ff7-449b-a496-92ab1c83bd4c	/	undefined	GET
+2023-11-10	14-11-54	7742dca4-28e7-4eb2-a38c-91b667c61ac2	/	undefined	GET
+2023-12-10	14-12-06	f1297262-2269-438d-8fe5-0d5d35b0ab9c	/	undefined	GET
+2023-14-10	14-14-29	11aaf2c9-2e51-44f7-ae87-07124d42a2d5	/	undefined	GET
+2023-14-10	14-14-39	9bb61ff6-4e18-458d-a31b-35f6aa0dda44	/	undefined	GET
+2023-14-10	14-14-39	4fb42900-eb9f-4a06-b4ea-40e74006fb9a	/favicon.ico	undefined	GET
+2023-24-10	14-24-25	474b73f3-ce02-406f-a50a-01af2f80586a	/	undefined	GET
+2023-24-10	14-24-32	e7a625c2-9d4c-44a2-8219-f99001101d0b	/	undefined	GET
+2023-26-10	14-26-15	35dc182b-7254-414a-9655-c3dc6ffaa72c	/	localhost	GET

@@ -22,7 +22,9 @@ const logEvents = (message, file) => {
 };
 
 const logger = (req, res, next) => {
-  logEvents(`${req.url}\t${req.headers.origin}\t${req.method}`, "reqLog.txt");
+  let origin = req.headers.origin;
+  if (!req.headers.origin) origin = "localhost";
+  logEvents(`${req.url}\t${origin}\t${req.method}`, "reqLog.txt");
   console.log(`${req.method}\t${req.path}`);
   next();
 };
