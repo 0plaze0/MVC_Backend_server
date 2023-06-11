@@ -17,9 +17,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/subdir", express.static(path.join(__dirname, "public")));
 
 //serve file
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "index.html"));
-});
+app.use("/", require("./routes/root"));
+app.use("/subdir", require("./routes/subdir"));
 
 //404 page not found
 app.all("*", (req, res) => {
@@ -35,6 +34,7 @@ app.all("*", (req, res) => {
 
 //error handling
 app.use(errorHandler);
+
 //listen in port
 app.listen(3500, () => {
   console.log(`Server is running in ${PORT}`);
