@@ -105,3 +105,13 @@
 2023-46-16	16-46-45	c15d1656-94b8-45e4-873e-3fec579f0a00	/employees	localhost	DELETE
 2023-47-16	16-47-01	5d3192f4-7120-4d88-889e-5a708a11d9d8	/employees	localhost	DELETE
 2023-52-16	16-52-59	47bd19d0-c251-49c2-a188-aeb7021c148a	/employees/1	localhost	GET
+2023-56-16	21-56-24	0f43f647-ca61-4b96-9eba-e1d89ff5debd	/register	localhost	POST
+2023-58-16	21-58-32	65055b07-bdf5-4c48-ac21-ea12d3963a60	/register	localhost	POST
+2023-03-17	01-03-44	4dd4e160-cae0-457b-a166-4e44f66736e5	/register	localhost	POST
+2023-34-17	11-34-28	52eebbac-66e7-4fa6-bb91-daa736b19721	/register	localhost	POST
+2023-34-17	11-34-48	b8cff125-62b4-4d3d-8974-1ffa2c5ff057	/register	localhost	POST
+2023-35-17	11-35-28	98d149f5-c967-459a-b5e5-d2f061a263d8	/register	localhost	POST
+2023-37-17	11-37-09	9938f029-8f02-42b1-86e4-88aefcf7a0a7	/register	localhost	POST
+2023-37-17	11-37-29	92ff4311-240e-4abc-975c-b22296a54ec8	/register	localhost	POST
+2023-39-17	11-39-27	c79f2317-88b2-4cf5-a295-d014a6353e7a	/register	localhost	POST
+2023-39-17	11-39-49	020aa559-3fd1-4bf8-a6b1-8dec29ea58b8	/register	localhost	POST
