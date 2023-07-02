@@ -8,6 +8,8 @@ const { errorHandler } = require("./middleware/errorHandler");
 const PORT = process.env.PORT || 3500;
 
 const { logger } = require("./middleware/logger");
+const verifyJWT = require("./middleware/verifyJWT");
+const cookieParser = require("cookie-parser");
 
 //middleware
 app.use(logger);
@@ -16,13 +18,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/subdir", express.static(path.join(__dirname, "public")));
+app.use(cookieParser());
 
 //serve file
 app.use("/", require("./routes/root"));
 app.use("/subdir", require("./routes/subdir"));
-app.use("/employees", require("./routes/api/employees"));
 app.use("/register", require("./routes/api/register"));
 app.use("/auth", require("./routes/api/auth"));
+app.use("/refresh", require("./routes/api/refreshToken"));
+app.use("/logout", require("./routes/api/logout"));
+
+app.use(verifyJWT); //the jwt will be verified then it will be able to access employees
+app.use("/employees", require("./routes/api/employees"));
 
 //404 page not found
 app.all("*", (req, res) => {
