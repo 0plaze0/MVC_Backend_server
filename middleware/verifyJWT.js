@@ -1,5 +1,4 @@
 const jwt = require("jsonwebtoken");
-require("dotenv").config();
 
 //the token is contained in the authorization in the form of ```Bearer <token>```
 //we extract the token and verify it with out secret key

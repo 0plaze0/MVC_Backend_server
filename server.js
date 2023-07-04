@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -5,12 +6,16 @@ const cors = require("cors");
 const corsOption = require("./config/corsOptions");
 
 const { errorHandler } = require("./middleware/errorHandler");
-const PORT = process.env.PORT || 3500;
 
 const { logger } = require("./middleware/logger");
 const verifyJWT = require("./middleware/verifyJWT");
 const cookieParser = require("cookie-parser");
+const mongoose = require("mongoose");
+const connectDB = require("./config/dbConn");
+const PORT = process.env.PORT || 3500;
 
+//connection
+connectDB();
 //middleware
 app.use(logger);
 app.use(cors(corsOption));
@@ -30,6 +35,7 @@ app.use("/logout", require("./routes/api/logout"));
 
 app.use(verifyJWT); //the jwt will be verified then it will be able to access employees
 app.use("/employees", require("./routes/api/employees"));
+app.use("/user", require("./routes/api/user"));
 
 //404 page not found
 app.all("*", (req, res) => {
@@ -47,6 +53,9 @@ app.all("*", (req, res) => {
 app.use(errorHandler);
 
 //listen in port
-app.listen(3500, () => {
-  console.log(`Server is running in ${PORT}`);
+mongoose.connection.once("open", () => {
+  console.log("connection to mongoDB");
+  app.listen(3500, () => {
+    console.log(`Server is running in ${PORT}`);
+  });
 });
